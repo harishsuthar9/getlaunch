@@ -10,9 +10,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://kit.fontawesome.com/a2e0e6f5f2.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/cb9a57ba46.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <style>
+        body {
+          font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+      </style>
 </head>
+
+
 
 <body>
     <div class="content">
@@ -29,16 +36,21 @@
             <p>Get ready everyone! We are currently working on something awesome</p>
         </div>
 
-        <div class="info">
-            <input type="text" placeholder="Email address" id="email">
+        <form id="notify-form" class="info">
+            <input type="email" name="email" id="email" placeholder="Email address" required>
+            <button class="btn" type="submit">Notify Me</button>
+        </form>
 
-            <button class="btn">Notify Me</button>
+        <div id="success-message" style="display:none; color:#00ffcc; font-weight:600; margin-top:10px;">
+            Thank you! You'll be notified soon.
+          </div>
 
-        </div>
         <div class="icon">
             <img src="Resources/linkedin (2).png" alt="linkdin" class="link">
             <img src="Resources/twitter.png" alt="twitter" class="link">
-            <img src="Resources/instagram.png" alt="instagram" class="link">
+            <a href="https://www.instagram.com/letsgetlaunch" target="_blank">
+                <img src="Resources/instagram.png" alt="instagram" class="link">
+              </a>
             <img src="Resources/whatsapp.png" alt="whatspp" class="link">
 
 
