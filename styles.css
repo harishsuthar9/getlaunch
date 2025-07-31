@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     color: white;
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif, ;
     height: 100vh;
     overflow: hidden;
 }
@@ -83,7 +83,7 @@ button {
     border: none;
     border-radius: 0;
     background-color: white;
-    color: #000000;
+    color: #8000ff;
     cursor: pointer;
     white-space: nowrap;
     font-family: montserrat;
@@ -115,4 +115,52 @@ button:hover {
 .social-icons a:hover {
     transform: scale(1.2);
     color: #8000ff;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  h1 {
+    font-size: 40px;
+  }
+  p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+    height: auto;
+  }
+  h1 {
+    font-size: 28px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .input-group {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  input[type="email"] {
+    width: 100%;
+    max-width: 100%;
+    font-size: 16px;
+  }
+  button {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 0;
+  }
+  .social-icons {
+    margin-top: 30px;
+  }
+  .social-icons a {
+    font-size: 28px;
+    margin: 0 8px;
+  }
+  body {
+    overflow: auto;
+  }
 }
