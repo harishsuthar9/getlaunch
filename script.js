@@ -15,11 +15,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
     fetch("https://script.google.com/macros/s/AKfycbyVdXY6AvPTNATQOPIDFugoH92UOPjNyybT9GHPMquuwRAxyatHudHhu3MFui81_V4I1g/exec", {
       method: "POST",
-      mode: "no-cors",
       body: formData
-    });
+    })
+    .then(response => response.text())
+    .then(result => {
+      const message = document.getElementById("success-message");
+      if (result === "Already Subscribed") {
+        message.innerText = "You're already subscribed!";
+      } else if (result === "Success") {
+        message.innerText = "Thank you for subscribing!";
+      } else {
+        message.innerText = "Something went wrong. Please try again.";
+      }
+      message.style.display = "block";
+      setTimeout(() => {
+        message.style.display = "none";
+      }, 4000); // hide after 4 seconds
 
-    document.getElementById("success-message").style.display = "block";
-    document.getElementById("email").value = "";
+      document.getElementById("email").value = "";
+    })
+    .catch(error => {
+      console.error("Error:", error);
+    });
   });
+  
 });
